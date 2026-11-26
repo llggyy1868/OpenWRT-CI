@@ -8,6 +8,8 @@ CONFIG_PACKAGE_fitblk=y
 
 CONFIG_PACKAGE_rtl9617c-pon-control=y
 CONFIG_PACKAGE_luci-app-rtl9617c-pon=y
+CONFIG_PACKAGE_luci-app-rtl9617c-pe=y
+CONFIG_PACKAGE_luci-app-rtl9617c-qos=y
 CONFIG_PACKAGE_ubi-utils=y
 CONFIG_PACKAGE_nand-utils=y
 CONFIG_PACKAGE_block-mount=y
