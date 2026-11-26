@@ -207,7 +207,7 @@ jobs:
         run: |
           cd ./wrt/
 
-          make download -j$(nproc)
+          make download -j$(nproc) V=sc
 
       - name: Compile Firmware
         if: ${{ !inputs.WRT_TEST }}
