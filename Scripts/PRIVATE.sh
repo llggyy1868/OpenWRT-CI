@@ -20,4 +20,9 @@ rm -rfv package/network/config/firewall4/patches/130-firewall4-add-support-for-f
 # openwrt-sonic-fullcone
 sh feeds/fullcone/add_sonic_fullcone.sh
 
+PROJECT_MIRRORS_FILE="./scripts/projectsmirrors.json"
+if [ -f "$PROJECT_MIRRORS_FILE" ]; then
+    perl -0pi -e 's/,\s*([\]}])/$1/g' $PROJECT_MIRRORS_FILE
+    python3 -m json.tool $PROJECT_MIRRORS_FILE >/dev/null && echo "JSON OK"
+fi
 echo "[PRIVATE.sh] 完成"
